@@ -1,6 +1,6 @@
 <?php
     include "php/controle-organizacao/dados-aprovacao-doador-pf-org.php";
-    include "php/controle-organizacao/sessao-org.php"; 
+    include "php/controle-organizacao/sessao.php"; 
     include "php/controle-site/consulta.php";
 ?>
 
