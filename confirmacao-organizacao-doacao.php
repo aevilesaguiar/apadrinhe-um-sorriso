@@ -239,7 +239,7 @@ $(".toggle").on("click", function() {
     echo "<br/>Sem doação no momento";
 
 } ?>
-<table class="table" >
+<table class="table" style="margin-left: 500px;max-width:58%" >
     
     <?php
                 $status_cadastro = $conecta->query(consulta_status_doacao($_GET['id_doacao']));
