@@ -11,7 +11,7 @@ function mensagem($codmsg){
                         6=>'Sua senha foi redefinida com sucesso',
                         7=>'Seu usuário ainda não foi confirmado.Por favor, acesse seu email.',
                         8=>'Usuário confirmado com sucesso!',
-                        9=>'Cadastrado com sucesso! Foi enviado um link de confirmação no seu email',
+                        9=>'Cadastrado com sucesso!',
                         10=>'CPF Inválido',
                         11=>'Numero inválido',
                         12=>'Senhas diferentes',

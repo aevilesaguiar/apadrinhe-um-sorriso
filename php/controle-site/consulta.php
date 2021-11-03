@@ -169,7 +169,7 @@ return $search;
                 INNER JOIN dados_pf df
                 ON df.fk_id_cadastro=dr.fk_id_cadastro
                 
-                WHERE c.data_hora_recebimento IS NOT NULL AND d.fk_id_cadastro="'.$id_organizacao.'"';
+                WHERE c.data_hora_recebimento IS NOT NULL AND d.fk_id_cadastro="'.$id_organizacao.'" ORDER BY c.id_doacao DESC';
         return $search;
     }
 

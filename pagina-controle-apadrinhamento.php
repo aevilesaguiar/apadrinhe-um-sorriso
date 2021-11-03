@@ -154,7 +154,7 @@ $(".toggle").on("click", function() {
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Nome Completo:</h6>
+                      <h6 class="mb-0"><?php echo $_SESSION['usuario']['tipo_cadastro']=='doador_pj'?'Empresa :':'Nome Completo:';?></h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                     <?php echo $_SESSION['usuario']['nome'];?>
