@@ -4,6 +4,7 @@ include '../geral/conexao-banco.php';
 include "sessao-org.php"; //Inicia sessao e encerra sessões
 include "consulta-org.php";
 include 'funcoes-cadastro-org.php';
+include '../controle-site/mensagens.php';
 
 //Upload arquivo
 if(isset($_POST['btnCadastraFamilia'])){
@@ -157,6 +158,8 @@ if(isset($_POST['btnCadastraFamilia'])){
     $cadastra_cadastra = $conecta->query(cadastra($rg_crianca,$_SESSION['usuario_org']['id_cadastro']));
 
     header("Location:../../cadastro-familia.php");
+
+    sessao_mensagem(mensagem(35));
 }
 
 
@@ -175,5 +178,6 @@ if(isset($_POST['btnCadastraColaborador'])){
     //cadastra colaborador na possui_colab
     $cadastra_possui_colab=mysqli_query($conecta, cadastra_possui_colab($cpf,$cnpj_org,$id_cadastro));
 
+    sessao_mensagem(mensagem(36));
     
 }

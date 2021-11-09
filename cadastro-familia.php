@@ -1,3 +1,6 @@
+<?php
+      include "php/controle-site/sessao.php"; 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -92,8 +95,9 @@ $(".toggle").on("click", function() {
             <h2>CADASTRO DA FAMÍLIA</h2>
         </div>
           <div class="sep-item "></div>
-          <div class="dist-menu"></div>
-      <div class="sobre-dado-fale">      
+          <div class="dist-menu"></div>  
+      <div class="sobre-dado-fale"> 
+      <p style="text-align: center; margin-bottom:20px; color: orange;" ><?php if(isset($_SESSION['mensagem'])){echo$_SESSION['mensagem'];};?></p>     
      <form class="row g-3  dist-mob-form" action="php/controle-organizacao/cadastro-org.php" method="post" enctype="multipart/form-data">
             <div class="col-md-6">
               <input type="text" class="form-control"  id="inputCpf" name="cpf_mae" onKeyPress="MascaraGenerica(this, 'CPF');" placeholder="CPF da mãe" required /> 

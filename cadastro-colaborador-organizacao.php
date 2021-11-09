@@ -1,3 +1,6 @@
+<?php
+      include "php/controle-site/sessao.php"; 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -101,7 +104,8 @@ $(".toggle").on("click", function() {
     <div class="sep-item "></div>
     <div class="dist-menu"></div>
             
-    <div class="sobre-dado-fale">      
+    <div class="sobre-dado-fale">  
+    <p style="text-align: center; margin-bottom:20px; color: orange;" ><?php if(isset($_SESSION['mensagem'])){echo$_SESSION['mensagem'];};?></p>    
       <form class="row g-3  dist-mob-form" method="POST" action="php/controle-organizacao/cadastro-org-colab.php" >
           <div class="col-md-6">
 

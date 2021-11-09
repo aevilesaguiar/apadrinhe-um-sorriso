@@ -39,6 +39,8 @@ function mensagem($codmsg){
                         As mensagens enviadas para o doador serão exibidas aqui, abaixo dos dados cadastrais do doador.',
                         33=>'Notificação resolvida !',
                         34=>'Entrega registrada com sucesso !',
+                        35=>'Familia cadastrada com sucesso !',
+                        36=>'O colaborador foi cadastrado com sucesso !'
 
                     );
 
