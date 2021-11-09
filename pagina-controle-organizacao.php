@@ -88,13 +88,9 @@ $(".toggle").on("click", function() {
                     </div>
                     <div>
                     <?php if(isset($_SESSION['logado'])!==TRUE){?>
-                        <a class=" button-menu" href="login.php" ><i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                        <a class=" button-menu" href="php/controle-site/seguranca.php?sair=true" ><i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
                         SAIR
                         </a>
-                        <?php }else{ ?>
-                            <a class=" button-menu" href="php/controle-site/seguranca.php?sair=true" ><i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
-                            SAIR
-                            </a>
                     <?php }?>
                      <li class="toggle"><span class="bars"></span></li>
                 </ul>

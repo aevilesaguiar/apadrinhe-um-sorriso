@@ -5,8 +5,10 @@
     include "redirecionamento-pagina.php";
     encerra_sessao();
     redireciona(3);
+    session_destroy();
     }else if(empty($_SESSION['usuario']['logado']) || $_SESSION['usuario']['logado']!== true){// Expulsa usuário caso não esteja conectado
         redireciona(4);
+        session_destroy();
     }
     
 
