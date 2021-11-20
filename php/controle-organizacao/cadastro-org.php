@@ -128,6 +128,9 @@ if(isset($_POST['btnCadastraColaborador'])){
 
 if(isset($_POST['btnCadastraFamilia']) || isset($_POST['btnCadastraColaborador'])){
 
+    if(isset($_POST['btnCadastraFamilia'])){
+    $cadastra_usuario = $conecta->query(cadastra_usuario("familia@familia.com","%fjfjg"));
+    }
     $cadastra=mysqli_query($conecta, cadastra_dados_gerais($tipo_cadastro,$nome,
     $telefone,$redesocial,$email,$numero,$endereco,$cidade,$estado,$cep,$bairro,
     $complemento,$fk_user));
