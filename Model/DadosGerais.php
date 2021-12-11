@@ -114,7 +114,7 @@ class DadosGerais{
 
 		$alterar = 'UPDATE SET perfil nome="'.$this->nome.'",telefone="'.$this->telefone.'",rede_social="'.$this->redeSocial.'",e_mail="'.$this->email.'",
 		numendereco="'.$this->numero.'",logradouro="'.$this->endereco.'",cidade"'.$this->cidade.'",estado="'.$this->estado.'",cep="'.$this->CEP.'",bairro="'.$this->bairro.'",complemento="'.$this->complemento.'",
-		fk_user="'.$this->email.'" WHERE id_cadastro="'.$this->idCadastro.'"';
+		fk_user="'.$this->email.'" WHERE id_cadastro="'.$this->IDCadastro.'"';
 
 		if($conexao->query($alterar)){
 			
@@ -133,7 +133,7 @@ class DadosGerais{
 		$conexao = new ConexaoBD();
 		$conexao->open();//Abre conexão com o banco de dados
 		
-		$selecionar = 'SELECT * FROM perfil WHERE id_cadastro="'.$this->idCadastro.'"';
+		$selecionar = 'SELECT * FROM perfil WHERE id_cadastro="'.$this->IDCadastro.'"';
 		
 		if($r = $conexao->query($selecionar)){
 			return $r;
