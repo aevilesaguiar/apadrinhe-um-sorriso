@@ -56,7 +56,7 @@ class PessoaJuridica extends DadosGerais{
 		$conexao = new ConexaoBD();
 		$conexao->open();
 	
-		$cadastra = 'INSERT INTO dados_pj(cnpj,nome_fantasia,segmento,descricao,site) VALUES("'.$this->cnpj.'","'.$this->nomeFantasia.'","'.$this->segmento.'","'.$this->descricao.'","'.$this->site.'")';
+		$cadastra = 'INSERT INTO dados_pj(cnpj,nome_fantasia,site,tipo_pj,fk_id_cadastro) VALUES("'.$this->cnpj.'","'.$this->nomeFantasia.'","'.$this->site.'","'.$this->segmento.'","'.$this->idCadastro.'")';
 
 		if($conexao->query($cadastra)){
 			return true;	

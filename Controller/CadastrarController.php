@@ -74,8 +74,14 @@
         $pessoaJuridica->setNomeFantasia($nomeFantasia);
         $pessoaJuridica->setSite($site);
         $pessoaJuridica->setSegmento($segmento);
-
         
+        if($pessoaFisica->cadastrarBD()==true)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
     }
 
 
