@@ -8,6 +8,46 @@ class PessoaFisica extends DadosGerais{
 	Private $dataNascimento; //Não disponivel como atributo no banco de dados no momento
 	Private $sexo; // Não disponivel como atributo no banco de dados no momento
 
+	public function setCpf($cpf)
+	{
+		$this->cpf=$cpf;
+	}
+ 
+	public function getCpf()
+	{
+		return $this->cpf;
+	}
+
+	public function setRg($rg)
+	{
+		$this->rg=$rg;
+	}
+ 
+	public function getRg()
+	{
+		return $this->rg;
+	}
+
+	public function setDataNascimento($dataNascimento)
+	{
+		$this->dataNascimento=$dataNascimento;
+	}
+ 
+	public function getDataNascimento()
+	{
+		return $this->dataNascimento;
+	}
+
+	public function setSexo($sexo)
+	{
+		$this->sexo=$sexo;
+	}
+ 
+	public function getSexo()
+	{
+		return $this->sexo;
+	}
+
 	public function cadastrarBD():bool{
 		require_once 'ConexaoBD.php';
 		

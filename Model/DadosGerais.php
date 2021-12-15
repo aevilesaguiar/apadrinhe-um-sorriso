@@ -1,7 +1,7 @@
 ﻿<?php
 
 class DadosGerais{
-	Private $IDCadastro;
+	Private $idCadastro;
 	Private $tipoCadastro;
 	Private $nome;
 	Private $endereco;
@@ -13,12 +13,13 @@ class DadosGerais{
 	Private $email;
 	Private $telefone;
 	Private $cep;	
+	Private $complemento;
 
-	public function setIDCadastro($IDCAdastro):void{
-			$this->IDCadastro=$IDCasdatro;
+	public function setIdCadastro($idCadastro):void{
+			$this->idCadastro=$idCadastro;
 	}
-	public function getIDCadastro():string{
-		return $this->setIDCadastro;
+	public function getIdCadastro():string{
+		return $this->setidCadastro;
 	}
 	public function setTipoCadastro($tipoCadastro):void{
 		$this->tipoCadastro=$tipoCadastro;
@@ -32,36 +33,11 @@ class DadosGerais{
 	public function getNome():string{
 		return $this->nome;
 	}
-	public function setEndereco($endereco):void{
-		$this->endereco=$endereco;
+	public function setTelefone($telefone):void{
+		$this->telefone=$telefone;
 	}
-
-	public function getEndereco():string{
-		return $this->endereco;
-	}
-	public function setNumero($numero):void{
-		$this->numero=$numero;
-	}
-	public function getNumero():string{
-		return $this->numero;
-	}
-	public function setBairro($bairro):void{
-		$this->bairro=$bairro;
-	}
-	public function getBairro():string{
-		return $this->bairro;
-	}
-	public function setCidade($cidade):void{
-		$this->cidade=$cidade;
-	}
-	public function getCidade():string{
-		return $this->cidade;
-	}
-	public function setEstado($estado):void{
-		$this->estado=$estado;
-	}
-	public function getEstado():string{
-		return $this->estado;
+	public function getTelefone():string{
+		return $this->telefone;
 	}
 	public function setRedeSocial($redeSocial):void{
 		$this->redeSocial=$redeSocial;
@@ -75,18 +51,49 @@ class DadosGerais{
 	public function getEmail():string{
 		return $this->email;
 	}
-	public function setCEP($cep):void{
+	public function setNumero($numero):void{
+		$this->numero=$numero;
+	}
+	public function getNumero():string{
+		return $this->numero;
+	}
+	public function setEndereco($endereco):void{
+		$this->endereco=$endereco;
+	}
+	public function getEndereco():string{
+		return $this->endereco;
+	}
+	public function setCidade($cidade):void{
+		$this->cidade=$cidade;
+	}
+	public function getCidade():string{
+		return $this->cidade;
+	}
+	public function setEstado($estado):void{
+		$this->estado=$estado;
+	}
+	public function getEstado():string{
+		return $this->estado;
+	}
+	public function setCep($cep):void{
 		$this->cep=$cep;
 	}
-	public function getCEP():string{
+	public function getCep():string{
 		return $this->cep;
 	}
-	public function setTelefone($telefone):void{
-		$this->telefone=$telefone;
+	public function setBairro($bairro):void{
+		$this->bairro=$bairro;
 	}
-	public function getTelefone():string{
-		return $this->telefone;
+	public function getBairro():string{
+		return $this->bairro;
 	}
+	public function setComplemento($complemento):void{
+		$this->complemento=$complemento;
+	}
+	public function getComplemento():string{
+		return $this->complemento;
+	}
+
 
 	public function cadastrarBD():bool{
 
@@ -99,6 +106,7 @@ class DadosGerais{
 		"'.$this->cep.'","'.$this->bairro.'","'.$this->complemento.'","'.$this->email.'")';
 
 		if($conexao->query($inserir)){
+			$this->idCadastro=$conexao->mysqli_insert_id();// Retorna o id do cadastro
 			return true;
 			$conexao->Close();
 		}else{

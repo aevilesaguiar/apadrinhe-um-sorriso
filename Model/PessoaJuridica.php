@@ -9,11 +9,11 @@ class PessoaJuridica extends DadosGerais{
 	Private $descricao;
 	Private $site;
 	
-	public function setCNPJ($cnpj):void{
+	public function setCnpj($cnpj):void{
 		$this->cnpj=$cnpj;
 	}
 	
-	public function getCNPJ():string{
+	public function getCnpj():string{
 		return $this->cnpj;
 	}
 	
