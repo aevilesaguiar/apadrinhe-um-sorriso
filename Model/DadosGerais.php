@@ -94,6 +94,41 @@ class DadosGerais{
 		return $this->complemento;
 	}
 
+	public function validarDados():bool{
+		if(strlen($this->nome)>80){
+            return false;
+        }
+        if(strlen($this->telefone)>15){
+            return false;
+        }
+        if(strlen($this->redeSocial)>100){
+            return false;
+        }
+        if(strlen($this->email)>50){
+            return false;
+        }
+        if(strlen($this->numero)>5 || !is_numeric($this->numero)){
+            return false;
+        }
+        if(strlen($this->endereco)>30){
+            return false;
+        }
+        if(strlen($this->cidade)>30){
+            return false;
+        }
+		if(strlen($this->estado)>2){
+            return false;
+        }
+		if(strlen($this->cep)>10){
+            return false;
+        }
+		if(strlen($this->bairro)>30){
+            return false;
+        }
+		if(strlen($this->complemento)>30){
+            return false;
+		}
+	}
 
 	public function cadastrarBD():bool{
 

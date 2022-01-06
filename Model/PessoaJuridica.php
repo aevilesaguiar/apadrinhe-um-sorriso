@@ -49,6 +49,26 @@ class PessoaJuridica extends DadosGerais{
 		return $this->site;
 	}
 	
+	public function validarDados():bool{
+		return true;
+		if(strlen($this->cnpj)>18){
+			return false;
+		}
+		if(strlen($this->nomeFantasia)>80){
+			return false;
+		}
+		if(strlen($this->segmento)>50){
+			return false;
+		}
+		if(strlen($this->descricao)>100){
+			return false;
+		}
+		if(strlen($this->site)>50){
+			return false;
+		}
+
+	}
+
 	public function cadastrarBD():bool{
 		
 		require_once 'ConexaoBD.php';
