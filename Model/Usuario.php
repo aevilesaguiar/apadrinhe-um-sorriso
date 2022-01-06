@@ -22,6 +22,19 @@ class Usuario extends DadosGerais{
 	public function getSenha(){
 		return $this->senha;
 	}
+
+	public function validarDados():bool{
+		if(strlen($this->email)>50){
+			$this->email=false;
+			return false;
+		}
+		if(strlen($this->senha)<6 && strlen($this->senha)>10){
+			$this->senha=false;
+			return false;
+		}
+	}
+
+
 	public function cadastrarBD():bool{
 		
 		require_once 'ConexaoBD.php';
