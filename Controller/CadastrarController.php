@@ -8,10 +8,20 @@
 
         $usuario->setEmail($email);
         $usuario->setSenha($senha);
-
-        if($usuario->caastrarBD()==true){
-            return true;
-        }else{
+        
+        if($usuario->validarDados()==true) // Valida dados
+        {
+            if($usuario->cadastrarBD()==true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else 
+        {
             return false;
         }
     }
@@ -36,10 +46,19 @@
         $dadosGerais->setBairro($bairro);
         $dadodGerais->setComplemento($complemento);
 
-        if($dadosGerais->cadastrarBD()==true)
+        
+        if($dadosGerais->validarDados()==true) //Valida Dados
         {
-            return true;
-        }else
+            if($dadosGerais->cadastrarBD()==true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else 
         {
             return false;
         }
@@ -54,6 +73,7 @@
         $pessoaFisica = new PessoaFisica();
         $pessoaFisica->setCpf($cpf);
         $pessoaFisica->setRg($rg);
+
         if($pessoaFisica->cadastrarBD()==true)
         {
             return true;
